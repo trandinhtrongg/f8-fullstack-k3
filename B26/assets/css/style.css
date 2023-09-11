@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+span {
+  user-select: none;
+}
+.play-btn {
+  font-size: 20px;
+}
+.container {
+  width: 60%;
+  padding: 0 15px;
+  margin: 40px auto;
+}
+.container .play-btn {
+  text-align: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.container .play-btn i {
+  display: none;
+}
+.container .play-btn i.active {
+  display: block;
+}
+.container .player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+.container .progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 99px;
+  position: relative;
+  cursor: pointer;
+}
+.progress-bar span.progress-time {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -150%);
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  visibility: hidden;
+}
+.progress-bar span.progress-time::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  z-index: 1px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(45deg);
+}
+.container .progress {
+  width: 0%;
+  background-color: orange;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 99px 0 0 99px;
+}
+.container .progress span {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+  background-color: orange;
+  border-radius: 50%;
+  cursor: pointer;
+}
